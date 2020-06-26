@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>폼 관련 태그 연습문제3</title>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+        <form style="border:1px solid black" method="post">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td>
+                        <input type="text" name="id" placeholder="아이디 10글자 이내" 
+                        maxlength="10" required>
+                    </td>
+                    <td>
+                        <button>중복 확인</button> <br>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>비밀번호</th>
+                    <td colspan="2">
+                        <input type="password" name="pwd" size="30" 
+                        placeholder="영문, 숫자, 특수문자 포함 8자 이상" required> <br>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td colspan="2">
+                        <input type="password" name="pwd2" size="30" required> <br>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                    
+                    <td>
+                    <select name="domain">
+                        <option value="네이버">@naver.com</option>
+                        <option value="다음">@hanmail.net</option>
+                        <option value="구글">@google.com</option>
+                        <option value="직접 입력" selected>직접 입력</option>
+                    </select> <br>
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label>프로필 사진</label> 
+            <input type="file" name="selectFile"> <br>
+
+            <label>성별 : </label>
+            <label for="male">남</label> 
+            <input type="radio" name="gender" value="m" id="male" checked>
+            <label for="female">여</label> 
+            <input type="radio" name="gender" value="f" id="female"> <br>
+
+            <label>생년월일 :</label>
+            <input type="date" name="birth"> <br>
+
+            <legend>취미</legend>
+            <input type="checkbox" name="hobby" value="야구" id="base"></input>
+            <label for="base">야구</label>
+
+            <input type="checkbox" name="hobby" value="농구" id="bask"></input>
+            <label for="bask">농구</label>
+
+            <input type="checkbox" name="hobby" value="축구" id="socc"></input>
+            <label for="socc">축구</label>
+
+            <input type="checkbox" name="hobby" value="공부" id="study"></input>
+            <label for="study">공부</label>
+
+            <input type="checkbox" name="hobby" value="음악감상" id="music"></input>
+            <label for="music">음악감상</label>
+
+            <input type="checkbox" name="hobby" value="기타" id="else"></input>
+            <label for="else">기타</label>
+            <input type="text"> <br>
+
+            <label>자기소개</label>
+            <textarea style="resize:none"></textarea>
+        </fieldset>
+    <br>
+    <button>회원 가입</button> 
+    <button type="reset">다시 입력</button>
+    <button type="button">이전으로</button>
+    </form>
+    </body>
+</html>

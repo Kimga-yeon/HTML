@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>표관련 태그</title>
+
+        <style>
+            /* 해당 문서에 적용할 css 코드를 작성하는 태그 */
+
+            table{
+                background-color:rgb(248, 218, 236);
+            }
+
+            thead{
+                background-color: rgb(197, 232, 243);
+            }
+
+            tbody{
+                background-color:rgb(214, 205, 245);
+            }
+
+            tfoot{
+                background-color: rgb(227, 192, 243);
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>표 관련 태그</h1>
+
+        <h3>&lt;table&gt;</h3>
+        <p>
+            웹 문서에 자료 정리를 위해 주로 사용되는 태그<br>
+            행과 열로 이루어져있고, 행과 열이 만나는 지점 셀(cell)이라곡 함
+        </p>
+
+        <h3>&lt;tr&gt;</h3>
+        <p>
+            한 개의 행(row)를 만드는 태그
+        </p>
+
+        <h3>&lt;td&gt;</h3>
+        <p>
+            한 개의 열을 만드는 태그
+        </p>
+
+        <h3>&lt;th&gt;</h3>
+        <p>
+            열에 대한 제목을 표시하는 태그<br>
+            td태그와 기본적인 사용법은 같으나, 작성되는 내용의 글씨가 굵어지고 가운데 정렬이 됨
+        </p> 
+
+        <hr>
+
+        <h1> 기본적인 표 만들기</h1>
+        
+          <!-- border 속성 : 테이블의 테두리 지정 -->
+        <table border="1px">
+            <tr> <!-- 하나의 행 생성 -->
+                <th>브라우저</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            <tr>
+                <td>익스플로러</td>
+                <td>MS</td>
+                <td>https://www.microsoft.com</td>
+            </tr>
+            <tr>
+                <td>크롬</td>
+                <td>Google</td>
+                <td>https://www.google.com</td>
+            </tr>
+            <tr>
+                <td>사파리</td>
+                <td>Apple</td>
+                <td>https://www.apple.com</td>
+            </tr>
+            <td>파이어폭스</td>
+            <td>Mozilla</td>
+            <td>https://www.mozilla.org</td>
+            </tr>
+        </table>
+
+        <figure>
+            <figcaption>&lt;figure&gt;: 테이블 또는 이미지의 설명을 적는데 사용되는 태그</figcaption> 
+            <figcaption>&lt;figcaption&gt;: figure 태그 내부에 설명을 작성할 때 사용되되는 태그</figcaption> 
+        
+        </figure>
+        
+        <hr>
+
+        <h1>표의 행과 열 합치기(병합)</h1>
+
+        <p>
+        rowspan 속성 : 행 병합 <br>
+        colspan 속성 : 열 병합
+        </p>
+
+        <h3>회원정보</h3>
+        <table border="1px">
+            <tr>
+                <td rowspan="2" colspan="2" width = "140px" height = "140px">사진</td>
+                <td width="70px"> 이름</td>
+                <td width="210px"></td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td width="70px" height="35px">주소</td>
+                <td colspan="3"> </td>
+            </tr>
+            <tr>
+                <td height="140px">자기소개</td>
+                <td colspan="3"> </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h1>테이블 태그의 구조 설정</h1>
+
+        <p>
+            &lt;thead&gt; : 테이블의 상단(제목, 컬럼 주제) 부분 영역
+            &lt;tbody&gt; : 테이블의 중단(데이터) 부분 영역
+            &lt;tfoot&gt; : 테이블의 하단(누계, 합계) 부분 영역
+        </p>
+
+        <table border = "1px">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>백동현</td>
+                    <td>20</td>
+                    <td>서울시 중구 남대문로 120</td>
+                </tr>
+
+                <tr>
+                    <td>김혜미</td>
+                    <td>25</td>
+                    <td>경기도 남양주시 저금동</td>
+                </tr>
+
+                <tr>
+                    <td>김서준</td>
+                    <td>29</td>
+                    <td>경기도 남양주시 저금동</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">총 인원</td>
+                    <td>3명</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+
+
+
+    </body>
+</html>
